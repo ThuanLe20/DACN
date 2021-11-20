@@ -81,7 +81,7 @@ C:\Users\thuan\OneDrive\Desktop\DoAnChuyenNganh\DoAnChuyenNganh\bin\System.Web.W
 C:\Users\thuan\OneDrive\Desktop\DoAnChuyenNganh\DoAnChuyenNganh\bin\Newtonsoft.Json.xml
 C:\Users\thuan\OneDrive\Desktop\DoAnChuyenNganh\DoAnChuyenNganh\bin\Antlr3.Runtime.pdb
 C:\Users\thuan\OneDrive\Desktop\DoAnChuyenNganh\DoAnChuyenNganh\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\thuan\OneDrive\Desktop\DoAnChuyenNganh\DoAnChuyenNganh\obj\Debug\DoAnChuyenNganh.csproj.AssemblyReference.cache
 C:\Users\thuan\OneDrive\Desktop\DoAnChuyenNganh\DoAnChuyenNganh\obj\Debug\DoAnChuyenNganh.csproj.CoreCompileInputs.cache
 C:\Users\thuan\OneDrive\Desktop\DoAnChuyenNganh\DoAnChuyenNganh\obj\Debug\DoAnChuyenNganh.dll
 C:\Users\thuan\OneDrive\Desktop\DoAnChuyenNganh\DoAnChuyenNganh\obj\Debug\DoAnChuyenNganh.pdb
-C:\Users\thuan\OneDrive\Desktop\DoAnChuyenNganh\DoAnChuyenNganh\obj\Debug\DoAnChuyenNganh.csproj.AssemblyReference.cache

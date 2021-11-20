@@ -1,4 +1,5 @@
 ﻿@using DoAnChuyenNganh.Models;
+<link href="~/Content/table.css" rel="stylesheet" />
 @model List<Cart>
 @{
     ViewBag.Title = "Order";
@@ -7,7 +8,7 @@
 
 <h2 style="text-align:center"><br /><br /><br />Supply Details</h2>
 <table align="center" border="1">
-    <tr style="text-align:center;font-weight:bold">
+    <tr style="text-align: center; font-weight: bold; color: black">
         <td>Id Product</td>
         <td>Name Product</td>
         <td>Image</td>
@@ -17,10 +18,10 @@
     </tr>
     @foreach (var item in Model)
     {
-        <tr style="text-align:center;font-weight:bold;">
+        <tr style="text-align:center;font-weight:bold;color:black">
             <td>@item.iidpro</td>
             <td>@item.snamepro</td>
-            <td><img src="~/Images/@item.simage" width="350" height="200" /></td>
+            <td><img src="~/Images2/@item.simage" width="350" height="200" /></td>
             @using (Html.BeginForm("UpdateCart", "Cart", new { @iidsp = item.iidpro }))
             {
                 <td>
@@ -47,30 +48,31 @@
     @using (Html.BeginForm())
     {
         @Html.ValidationSummary(true)
-        <tr style="height:40px">
+        <tr >
             <td>Customer Name</td>
             <td style="font-weight:bold">@m.name</td>
         </tr>
-        <tr style="height:40px">
+        <tr >
             <td>Address</td>
             <td style="font-weight:bold">@m.address</td>
         </tr>
 
-        <tr style="height:40px">
+        <tr >
             <td>Phone</td>
             <td style="font-weight:bold">@m.phone</td>
         </tr>
-        <tr style="height:40px">
+        <tr >
             <td>Date in</td>
             <td style="font-weight:bold">@DateTime.Now.ToShortDateString()</td>
         </tr>
-        <tr style="height:40px">
+        <tr>
             <td>Date out</td>
             <td style="font-weight:bold">
                 <input type="date" name="Dateout" />
             </td>
+            @ViewData["Loi"]
         </tr>
-        <tr style="height:40px">
+        <tr >
             <td></td>
             <td>
                 <input type="submit" value="Accept Order" />
@@ -78,49 +80,7 @@
         </tr>
     }
 </table>
-<div>
-<div id="paypal-button" style="text-align:center"></div>
-    <div type="hidden" id="vnd_to_usd" ></div>
 
-</div>
-<script src="https://www.paypalobjects.com/api/checkout.js"></script>
-<script>
-  paypal.Button.render({
-    // Configure environment
-    env: 'sandbox',
-    client: {
-        sandbox: 'AZp6hUVPsJIRitDkoN_m6Rfn1qz5ZjeMY7gNZ0Q8_hzeDjs1I-yELagsEnrnk24igUaqRpAp5jFPwKLn',
-      production: 'demo_production_client_id'
-    },
-    // Customize button (optional)
-    locale: 'en_US',
-    style: {
-      size: 'small',
-      color: 'gold',
-      shape: 'pill',
-    },
 
-    // Enable Pay Now checkout flow (optional)
-    commit: true,
 
-    // Set up a payment
-    payment: function(data, actions) {
-      return actions.payment.create({
-        transactions: [{
-          amount: {
-            total: '0.01',
-            currency: 'USD'
-          }
-        }]
-      });
-    },
-    // Execute the payment
-    onAuthorize: function(data, actions) {
-      return actions.payment.execute().then(function() {
-        // Show a confirmation message to the buyer
-        window.alert('Thank you for your purchase!');
-      });
-    }
-  }, '#paypal-button');
 
-</script>

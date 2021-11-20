@@ -7,23 +7,23 @@
 
 <h2><br /><br />Cart Details</h2>
 <table align="center" border="1">
-    <tr style="text-align:center;font-weight:bold">
+    <tr style="text-align:center;font-weight:bold;color:black">
         <td>Id Product</td>
         <td>Name Product</td>
         <td>Image</td>
         <td>Count</td>
         <td>Unit Price</td>
-        <td>Price</td>
+        <td>Total Price</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     @foreach (var item in Model)
     {
-        <tr style="text-align:center;font-weight:bold;">
+        <tr style="text-align: center; font-weight: bold; color: black">
             <td>@item.iidpro</td>
             <td>@item.snamepro</td>
-            <td><img src="~/Images/@item.simage" width="350" height="200" /></td>
+            <td><img src="~/Images2/@item.simage" width="350" height="200" /></td>
             @using (Html.BeginForm("UpdateCart", "Cart", new { @iidsp = item.iidpro }))
             {
                 <td>

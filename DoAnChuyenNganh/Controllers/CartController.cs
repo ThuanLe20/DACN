@@ -107,18 +107,18 @@ namespace DoAnChuyenNganh.Controllers
         {
             List<Cart> getcart = ListCart();
             getcart.Clear();
-            return RedirectToAction("All", "ABC");
+            return RedirectToAction("ProductAll", "ABC", new { id = "1" });
         }
         [HttpGet]
         public ActionResult Order()
         {
             if (Session["Username"] == null || Session["Username"].ToString() == "")
             {
-                return RedirectToAction("login", "ABC");
+                return RedirectToAction("login", "Man");
             }
             if (Session["Cart"] == null)
             {
-                return RedirectToAction("All", "ABC");
+                return RedirectToAction("ProductAll", "ABC",new { id = "1"});
             }
             List<Cart> getcart = ListCart();
             ViewBag.Totalcount = TotalCount();
@@ -136,6 +136,11 @@ namespace DoAnChuyenNganh.Controllers
             b.datein = DateTime.Now;
             var dateout = String.Format("{0:MM/dd/yyyy}", collection["dateout"]);
             b.dateout = DateTime.Parse(dateout);
+            int compare = DateTime.Compare((DateTime)b.datein, (DateTime)b.dateout);
+            if(compare > 0)
+            {
+                @ViewData["Loi1"] = "Time not correct";
+            }
             data.Bills.InsertOnSubmit(b);
             data.SubmitChanges();
             foreach(var item in getcart)
