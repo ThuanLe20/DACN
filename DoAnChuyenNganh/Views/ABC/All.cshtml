@@ -1,0 +1,21 @@
+﻿@model IEnumerable<DoAnChuyenNganh.Models.Category>
+<br />
+<br />
+<br />
+
+<div class="example">
+    <div class="container" style="color:black;font-size:larger;font-weight:bold"><i class="fa fa-list"></i> DANH MỤC</div>
+    <div class="list-group category_block">
+        @foreach (var item in Model)
+        {
+            <li class="list-group-item text-white" style="list-style:none">
+                <a href="@Url.Action("ProductAll", "ABC", new { id = item.idcate})">
+                    @item.name
+                </a>
+            </li>
+        }
+    </div>
+
+</div>
+
+

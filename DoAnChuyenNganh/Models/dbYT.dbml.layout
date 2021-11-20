@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 12.25" name="dbYT">
+  <DataContextMoniker Name="/dbYTDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3fe71996-faef-43bd-b38d-0a812df40da1" absoluteBounds="6.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/dbYTDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="816b85f5-83dd-4d85-b326-83ee50ef5eb9" absoluteBounds="6.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="844b1bdb-86be-44f7-9b2f-f8d810d798cc" absoluteBounds="3.5, 9.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/dbYTDataContext/Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a9930aae-1d64-451b-9624-962e739a1221" absoluteBounds="3.515, 10.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d838a6a5-69e4-4f3c-8b36-f249f4fd8c9b" absoluteBounds="3.5, 6.5, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/dbYTDataContext/Bill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1b16656-e2fa-40fb-837b-bce8b0b44a82" absoluteBounds="3.515, 6.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="552bd12c-dadc-4e4b-b060-0e0d267da1f8" absoluteBounds="3.5, 1.375, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/dbYTDataContext/Cart" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9f87a97-3e1e-4c9a-bb57-49be0ca0ca7e" absoluteBounds="3.515, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fba69272-50a2-4bb8-b227-1c4b51142eed" absoluteBounds="0.75, 10.375, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/dbYTDataContext/Category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="245e48c5-d906-4161-b239-c90282777c51" absoluteBounds="0.765, 10.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4d22c1a0-a887-4798-a853-30a3027582ba" absoluteBounds="3.5, 3.5, 2, 2.347801106770834">
+      <DataClassMoniker Name="/dbYTDataContext/Contact" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6f770d64-7ec1-4a4b-be77-25e4f45d7770" absoluteBounds="3.515, 3.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a3d356e-c18f-4e15-9888-4fbd709d348f" absoluteBounds="6.75, 6.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbYTDataContext/InfoBill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d51659a-5591-4046-b457-65a38cb6f643" absoluteBounds="6.765, 7.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="55a9d403-13e0-4df9-82c3-68b29a251392" absoluteBounds="6.25, 1.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/dbYTDataContext/InfoCart" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3c43bf6-f295-43a7-bedb-124d220b5151" absoluteBounds="6.265, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="615e347e-f12e-4b15-a235-7e89acf7ca7f" absoluteBounds="0.75, 3.875, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/dbYTDataContext/Man" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e9db6c2c-693f-459f-a6cd-fef3df35fb0c" absoluteBounds="0.765, 4.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 11.0681469726562); (3.5 : 11.0681469726562)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbYTDataContext/Category/Category_Product" />
+      <nodes>
+        <classShapeMoniker Id="fba69272-50a2-4bb8-b227-1c4b51142eed" />
+        <classShapeMoniker Id="844b1bdb-86be-44f7-9b2f-f8d810d798cc" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.06814697265625); (6.25 : 2.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbYTDataContext/Cart/Cart_InfoCart" />
+      <nodes>
+        <classShapeMoniker Id="552bd12c-dadc-4e4b-b060-0e0d267da1f8" />
+        <classShapeMoniker Id="55a9d403-13e0-4df9-82c3-68b29a251392" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.9527498372396); (6.46875 : 10.9527498372396); (6.46875 : 2.82859537760417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbYTDataContext/Product/Product_InfoCart" />
+      <nodes>
+        <classShapeMoniker Id="844b1bdb-86be-44f7-9b2f-f8d810d798cc" />
+        <classShapeMoniker Id="55a9d403-13e0-4df9-82c3-68b29a251392" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 6.4151025390625); (1.75 : 7.77005126953125); (3.5 : 7.77005126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbYTDataContext/Man/Man_Bill" />
+      <nodes>
+        <classShapeMoniker Id="615e347e-f12e-4b15-a235-7e89acf7ca7f" />
+        <classShapeMoniker Id="d838a6a5-69e4-4f3c-8b36-f249f4fd8c9b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 3.875); (1.75 : 2.06814697265625); (3.5 : 2.06814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbYTDataContext/Man/Man_Cart" />
+      <nodes>
+        <classShapeMoniker Id="615e347e-f12e-4b15-a235-7e89acf7ca7f" />
+        <classShapeMoniker Id="552bd12c-dadc-4e4b-b060-0e0d267da1f8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.86140055338542); (3.5 : 4.86140055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbYTDataContext/Man/Man_Contact" />
+      <nodes>
+        <classShapeMoniker Id="615e347e-f12e-4b15-a235-7e89acf7ca7f" />
+        <classShapeMoniker Id="4d22c1a0-a887-4798-a853-30a3027582ba" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

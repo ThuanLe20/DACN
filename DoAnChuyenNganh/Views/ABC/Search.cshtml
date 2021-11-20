@@ -1,0 +1,43 @@
+﻿@using DoAnChuyenNganh.Models
+@model IEnumerable<DoAnChuyenNganh.Models.Product>
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_LayoutABC1.cshtml";
+}
+@*<br /><br /><br /><br />
+    <div class="search-hotel" style="text-align:center">
+        <h3 class="agileits-sear-head">Search</h3>
+        <form action="#" method="post">
+            <input type="search" placeholder="Product name..." name="search" required>
+            <input type="submit" value="Searchs" />
+        </form>
+    </div>*@
+<br />
+<br />
+<br />
+<br />
+@*<h2>@ViewData["tb1"]</h2>
+<h2> @ViewBag.Thongbao" @ViewBag.keyword " </h2>*@
+<body>
+    <div class="row">
+        @foreach (var sanpham in Model)
+        {
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="@Url.Action("Details","ABC", new { id = sanpham.idpro })">
+                        <img alt="@sanpham.namepro" src="~/Images2/@sanpham.image" width="180" />
+                        <div>
+                            <br />
+                            <h5 style="text-align:center">
+                                @sanpham.namepro
+                            </h5>
+                            <p></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+
+

@@ -1,0 +1,58 @@
+﻿@model DoAnChuyenNganh.Models.Man
+
+@{
+    ViewBag.Title = "DetailsBill";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>DetailsBill</h2>
+
+<div>
+    <h4>Man</h4>
+    <hr />
+    <dl class="dl-horizontal" style="font-size:30px ; text-align:center">
+        <dt>
+            Name : 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            Email : 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+           Phone : 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+        <dt>
+           Address :
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.address)
+        </dd>
+
+        <dt>
+           Birth : 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.birth)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Bill")
+</p>

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<DoAnChuyenNganh.Models.Product>
+@using DoAnChuyenNganh.Models;
+
+<link href="~/Content/teststyle2.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "ProductAll";
+    Layout = "~/Views/Shared/_LayoutABC1.cshtml";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            @Html.Action("All", "ABC")
+
+            @Html.Action("NewestProduct","ABC")
+        </div>
+        <div class="col-sm-9">
+            <br /><br /><br /><br /><br /><br />
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <a href="@Url.Action("Details", "ABC", new { id = item.idpro})">
+                                <img alt="@item.namepro" src="~/Images2/@item.image" />
+                                <div class="caption">
+                                    <h4 style="text-align:center; font-size:larger"> @item.namepro  </h4>
+                                    <h4 style="text-align:center">@item.price VNĐ</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

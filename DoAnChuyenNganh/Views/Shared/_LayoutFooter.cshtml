@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>LTH Medical Care</title>
+    <meta charshet="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link href="~/Content/teststyle2.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<footer>
+    <div style="color:white">
+        @RenderSection("something", required: false)
+        @RenderBody()
+    </div>
+    <div class="container1">
+        <div class="row">
+            <div class="footer-col-1">
+                <img src="~/Images2/truck.png" style="width:80px;height: 80px;">
+                <p>456 Điện Biên Phủ, Quận BT, TP.HCM</p>
+            </div>
+            <div class="footer-col-2">
+                <img src="~/Images2/mail.png" style="width:60px;height: 60px;">
+                <p>testmail@gmail.com</p>
+            </div>
+            <div class="footer-col-3">
+                <img src="~/Images2/phone.png" style="width:50px;height: 50px;">
+                <p>Số tư vấn : 0973100740</p>
+            </div>
+            <div class="footer-col-4">
+                <img src="~/Images2/facebook.png" style="width:70px;height: 70px;">
+                <p>Trang liên kết chính thức của web</p>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">© 2021 LTH Hospital. All rights reserved. - CÔNG TY TNHH WEB NHÀ THUỐC </p>
+        <p class="copyright">Giấy phép kinh doanh số 0107583890 do Sở KHĐT Tp. Hồ Chí minh cấp ngày 04/10/2021</p>
+    </div>
+</footer>

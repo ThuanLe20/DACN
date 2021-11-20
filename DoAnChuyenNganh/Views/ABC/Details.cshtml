@@ -1,0 +1,31 @@
+﻿<link href="~/Content/details.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutABC1.cshtml";
+}
+<br /><br />
+<h3>Product Details</h3>
+<div>
+    <div class="hinh">
+        <img src="~/Images2/@Model.image" />
+    </div>
+    <div class="noidung">
+        <h4>@Model.namepro </h4>
+        <div class="rating">
+            <div class="stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <span class="review-no">999 reviews</span>
+        </div>
+        <p>@Model.description </p>
+        <p><span> @Model.price VNĐ</span></p>
+        <div id="Datmua">
+            <a href="@Url.Action("AddCart", "Cart", new { @iidpro = @Model.idpro ,@strURL=Request.Url.ToString()})" style="color:black">Order</a>
+            <a href="@Url.Action("ProductAll", "ABC",new { id ="1"})" style="color:black">Back</a>
+        </div>
+    </div>
+</div>

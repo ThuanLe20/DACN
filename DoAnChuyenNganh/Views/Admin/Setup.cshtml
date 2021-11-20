@@ -1,0 +1,67 @@
+﻿@model DoAnChuyenNganh.Models.Bill
+
+@{
+    ViewBag.Title = "DetailsBill";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Setup</title>
+</head>
+<body>
+    <h3>Are you sure you want to setup this?</h3>
+    <div>
+        <h4>Bill</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Address :
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.address)
+            </dd>
+
+            <dt>
+                Datein :
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.datein)
+            </dd>
+
+            <dt>
+                Dateout :
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.dateout)
+            </dd>
+
+            <dt>
+                Phone :
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.phoneout)
+            </dd>
+
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Setup" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Bill")
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link href="~/Content/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/form-elements.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- Top content -->
+    <div class="top-content">
+
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <p>Create your account here :</p>
+                                <h4 style="color:red; text-align:center">@ViewBag.Thongbao</h4>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-key"></i>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            @using (Html.BeginForm())
+                            {
+                                @Html.ValidationSummary(true)
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-name">Name</label>
+                                    <input type="text" name="name" placeholder="Name..." class="form-name form-control" id="form-name">
+                                    @ViewData["Loi1"]
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-username">Username</label>
+                                    <input type="text" name="username" placeholder="Username..." class="form-username form-control" id="form-username">
+                                    @ViewData["Loi2"]
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-password">Password</label>
+                                    <input type="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
+                                    @ViewData["Loi3"]
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-repassword">Re-enter password</label>
+                                    <input type="password" name="repassword" placeholder="Repassword..." class="form-repassword form-control" id="form-repassword">
+                                    @ViewData["Loi4"]
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-email">Email</label>
+                                    <input type="text" name="email" placeholder="Email..." class="form-email form-control" id="form-email">
+                                    @ViewData["Loi5"]
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-address">Address</label>
+                                    <input type="text" name="address" placeholder="Address..." class="form-address form-control" id="form-address">
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-phone">Phone</label>
+                                    <input type="text" name="phone" placeholder="Phone..." class="form-phone form-control" id="form-phone">
+                                    @ViewData["Loi6"]
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-birth">Birth</label>
+                                    <input type="date" name="birth" placeholder="Birth..." class="form-birth form-control" id="form-birth">
+                                   
+                                </div>
+                                <label><a href="@Url.Action("login","ABC")">Log in now</a></label>
+                                <button type="submit" class="btn">Sign in!</button>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="~/Content/assets/js/jquery-1.11.1.min.js"></script>
+    <link href="~/Content/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/assets/js/jquery.backstretch.min.js"></script>
+    <script src="~/Content/assets/js/scripts.js"></script>
+</body>
+</html>

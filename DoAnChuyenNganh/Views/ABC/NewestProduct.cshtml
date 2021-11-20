@@ -1,0 +1,19 @@
+﻿@model IEnumerable<DoAnChuyenNganh.Models.Product>
+
+<div class="card bg-light mb-3">
+    <div class="card-header bg-success text-white text-uppercase bg-warning" style="color: black; font-size: larger; font-weight: bold"><i class="fa fa-bell"></i>Sản phẩm mới nhất</div>
+    <div class="card-body">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-6 col-lg-6 col-md-6">
+                <div class="thumbnail">                
+                    <a href="@Url.Action("Details", "ABC", new { id = item.idpro })">
+                        <img alt="@item.namepro" src="~/Images2/@item.image" />
+                        <h4 style="text-align:center; font-size:larger"> @item.namepro  </h4>
+                        <h4 style="text-align:center">@item.price VNĐ</h4>
+                    </a>
+                </div>               
+            </div>
+        }
+        </div>
+</div>

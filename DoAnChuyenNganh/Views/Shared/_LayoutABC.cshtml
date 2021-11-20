@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>LTH Medical Care</title>
+    <meta charshet="utf-8" />
+    <link rel="stylesheet" type="text/css" href="teststyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="~/Content/teststyle.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="color:white">
+        @RenderSection("something", required: false)
+        @RenderBody()
+    </div>
+    <div class="header">
+        <div class="container" id="myHeader">
+            <nav>
+                <div class="brand">
+                    <h2 href="@Url.Action(" Index","ABC")">LTH Medical Care</h2>
+                </div>
+                <ul>
+                    <li><a href="@Url.Action("Index","ABC")">Home <i class="fa fa-heartbeat" aria-hidden="true"></i></a></li>
+                    <li><a href="@Url.Action("ProductAll","ABC",new { id = "1" })">Products <i class="fa fa-id-badge" aria-hidden="true"></i></a></li>
+                    <li><a href="@Url.Action("Corporate", "ABC")">Corporate <i class="fa fa-handshake-o" aria-hidden="true"></i></a></li>
+                    <li><a href="@Url.Action("Contact", "ABC")">Contact <i class="fa fa-address-card-o" aria-hidden="true"></i></a></li>
+                    @{
+                        if (Session["username"] == null)
+                        {
+                            <li><a href="@Url.Action("login","Man")">Login <i class="fa fa-sign-in"></i></a></li>
+                        }
+                        else
+                        {
+                            <li><a href="@Url.Action("logout","Man")">Logout <i class="fa fa-sign-out"></i></a></li>
+                        }
+                    }
+                    <li><a href="@Url.Action("Cart","Cart")">Cart(@ViewBag.totalcount)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <br><br><br>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="~/Images2/slide1.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+            <img src="~/Images2/slide2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="~/Images2/slide3.jpg" style="width:100%">        
+        </div>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+
+
+
+
+
+
+    <div class="content">
+        <div class="small-container">
+            <h2>Hot Products For Epidemic Prevention</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="~/Images2/sanphamdemo1.jpg">
+                    <h4>Khẩu trang 3 lớp</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <img src="~/Images2/sanphamdemo2.jpg">
+                    <h4>Dung dịch sát khuẩn</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <img src="~/Images2/sanphamdemo3.jpg">
+                    <h4>Cồn 90 độ</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <img src="~/Images2/sanphamdemo4.jpg">
+                    <h4>Nước muối sinh lý</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <h1> Our customer’s health and safety always comes first.</h1>
+        </div>
+        <div class="col-2">
+            <img src="~/Images2/bacsi2.jpg">
+        </div>
+    </div>
+    <div class="content">
+        <div class="small-container">
+            <h2>Hot Products For Health</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="~/Images2/thuochomethorphan.jpg">
+                    <h4>Thuốc ho Methorphan</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <img src="~/Images2/panadol.jpg">
+                    <h4>Thuốc Panadol</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <img src="~/Images2/clorphe.jpg">
+                    <h4>Thuốc Clorpheniramin</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <img src="~/Images2/stadnex.jpg">
+                    <h4>Thuốc Stadnex</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <div>
+            <img src="~/Images2/bacsi13.jpg" />
+        </div>
+    </div>
+    <div class="content">
+        <div class="small-container">
+            <h2>Hot Products For Kid</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="~/Images2/bio.jpg">
+                    <h4>Thuốc Bio-acimin gold</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <img src="~/Images2/astex.jpg">
+                    <h4>Thuốc ho Astex</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <img src="~/Images2/oralplus.jpg">
+                    <h4>Thuốc Oralplus</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <img src="~/Images2/cankids.jpg">
+                    <h4>Thuốc Cankids vioba</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer">
+        <section class="section dark" id="section_1102542593">
+            <div class="bg section-bg fill bg-fill bg-loaded bg-loaded"></div>
+            <div class="section-content relative">
+                <div class="row row-small" id="row-110716735">
+                    <div id="col-235243528" class="col medium-6 small-12 large-3" data-animate="fadeInRight" data-animated="true">
+                        <div class="col-inner">
+                            <div class="icon-box featured-box icon-box-left text-left">
+                                <div class="icon-box-img" style="width: 250px">
+                                    <div class="icon">
+                                        <div class="icon-inner">
+                                            <img width="64" height="64" src="~/Images2/truck blue.png" class="attachment-medium size-medium lazyloaded" alt="" loading="lazy" sizes="(max-width: 64px) 100vw, 64px" srcset="~/Images2/truck blue.png 64w, ~/Images2/truck blue.png 24w, ~/Images2/truck blue.png 36w, ~/Images2/truck blue.png 48w" data-ll-status="loaded">
+                                            <noscript><img width="64" height="64" src="~/Images2/truck blue.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="~/Images2/truck blue.png 64w, ~/Images2/truck blue.png 24w, ~/Images2/truck blue.png 36w, ~/Images2/truck blue.png 48w" sizes="(max-width: 64px) 100vw, 64px" /></noscript>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icon-box-text last-reset">
+                                    <h5 class="uppercase"><strong>GIAO HÀNG TOÀN QUỐC</strong></h5>
+                                    <h6>Hà Nội - Hồ Chí Minh</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="col-2052551337" class="col medium-6 small-12 large-3" data-animate="fadeInRight" data-animated="true">
+                        <div class="col-inner">
+                            <div class="icon-box featured-box icon-box-left text-left">
+                                <div class="icon-box-img" style="width: 250px">
+                                    <div class="icon">
+                                        <div class="icon-inner">
+                                            <img width="64" height="64" src="~/Images2/gift.png" class="attachment-medium size-medium lazyloaded" alt="" loading="lazy" sizes="(max-width: 64px) 100vw, 64px" srcset="~/Images2/gift.png 64w, ~/Images2/gift.png 24w, ~/Images2/gift.png 36w, ~/Images2/gift.png 48w" data-ll-status="loaded">
+                                            <noscript><img width="64" height="64" src="~/Images2/gift.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="~/Images2/gift.png 64w, ~/Images2/gift.png 24w, ~/Images2/gift.png 36w, ~/Images2/gift.png 48w" sizes="(max-width: 64px) 100vw, 64px" /></noscript>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icon-box-text last-reset">
+                                    <h5 class="uppercase"><strong>MUA SỈ CHIẾT KHẤU CAO</strong></h5>
+                                    <h6>Giá tốt nhất thị trường</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="col-1014330787" class="col medium-6 small-12 large-3" data-animate="fadeInRight" data-animated="true">
+                        <div class="col-inner">
+                            <div class="icon-box featured-box icon-box-left text-left">
+                                <div class="icon-box-img" style="width: 250px">
+                                    <div class="icon">
+                                        <div class="icon-inner">
+                                            <img width="64" height="64" src="~/Images2/thumbs-o-up.png" class="attachment-medium size-medium lazyloaded" alt="" loading="lazy" sizes="(max-width: 64px) 100vw, 64px" srcset="~/Images2/thumbs-o-up.png 64w, ~/Images2/thumbs-o-up.png 24w, ~/Images2/thumbs-o-up.png 36w, ~/Images2/thumbs-o-up.png 48w" data-ll-status="loaded">
+                                            <noscript><img width="64" height="64" src="~/Images2/thumbs-o-up.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="~/Images2/thumbs-o-up.png 64w, ~/Images2/thumbs-o-up.png 24w, ~/Images2/thumbs-o-up.png 36w, ~/Images2/thumbs-o-up.png 48w" sizes="(max-width: 64px) 100vw, 64px" /></noscript>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icon-box-text last-reset">
+                                    <h5 class="uppercase"><strong>UY TÍN - CHẤT LƯỢNG</strong></h5>
+                                    <h6>Đảm bảo hàng chính hãng</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="col-1050173511" class="col medium-6 small-12 large-3" data-animate="fadeInRight" data-animated="true">
+                        <div class="col-inner">
+                            <div class="icon-box featured-box icon-box-left text-left">
+                                <div class="icon-box-img" style="width: 250px">
+                                    <div class="icon">
+                                        <div class="icon-inner">
+                                            <img width="64" height="64" src="~/Images2/squarephone.png" class="attachment-medium size-medium lazyloaded" alt="" loading="lazy" sizes="(max-width: 64px) 100vw, 64px" srcset="~/Images2/squarephone.png 64w, ~/Images2/squarephone.png 24w, ~/Images2/squarephone.png 36w, ~/Images2/squarephone.png 48w" data-ll-status="loaded">
+                                            <noscript><img width="64" height="64" src="~/Images2/squarephone.png" class="attachment-medium size-medium" alt="" loading="lazy" srcset="~/Images2/squarephone.png 64w, ~/Images2/squarephone.png 24w, ~/Images2/squarephone.png 36w, ~/Images2/squarephone.png 48w" sizes="(max-width: 64px) 100vw, 64px" /></noscript>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icon-box-text last-reset">
+                                    <h5 class="uppercase"><strong>HỖ TRỢ NHIỆT TÌNH</strong></h5>
+                                    <h6>Tư vấn miễn phí</h6>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                #section_1102542593 {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    background-color: rgb(22, 134, 232);
+                }
+            </style>
+        </section>
+        <div class="container1">
+            <div class="row">
+                <div class="footer-col-1">
+                    <img src="~/Images2/truck.png" style="width:80px;height: 80px;">
+                    <p>456 Điện Biên Phủ, Quận BT, TP.HCM</p>
+                </div>
+                <div class="footer-col-2">
+                    <img src="~/Images2/mail.png" style="width:60px;height: 60px;">
+                    <p>testmail@gmail.com</p>
+                </div>
+                <div class="footer-col-3">
+                    <img src="~/Images2/phone.png" style="width:50px;height: 50px;">
+                    <p>Số tư vấn : 0973100740</p>
+                </div>
+                <div class="footer-col-4">
+                    <img src="~/Images2/facebook.png" style="width:70px;height: 70px;">
+                    <p>Trang liên kết chính thức của web</p>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">© 2021 LTH Hospital. All rights reserved. - CÔNG TY TNHH WEB NHÀ THUỐC </p>
+            <p class="copyright">Giấy phép kinh doanh số 0107583890 do Sở KHĐT Tp. Hồ Chí minh cấp ngày 04/10/2021</p>
+        </div>
+    </div>
+</footer>
+</html>
+    <script type="text/javascript">
+        window.onscroll = function () { myFunction() };
+
+
+        var header = document.getElementById("myHeader");
+
+
+        var sticky = header.offsetTop;
+
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+    </script>
+    <script>
+  var slideIndex;
+  function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+ 
+      slides[slideIndex].style.display = "block";  
+      dots[slideIndex].className += " active";
+      slideIndex++;
+      if (slideIndex > slides.length - 1) {
+        slideIndex = 0
+      }    
+      setTimeout(showSlides, 5000);
+  }
+  showSlides(slideIndex = 0);
+ 
+ 
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+        }
+
+</script>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+   
+
+
